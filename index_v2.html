@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PMAX Real Estate · 2026 Strategic Briefing</title>
+<meta name="description" content="PMAX BrandCom Real Estate vertical strategic briefing for BOM — Strategic Brief V2, Capability Deck, H2 2026 Roadmap, Market Research." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --pmax-red: #E11D2A;
+    --pmax-red-dark: #B81522;
+    --pmax-navy: #1A1A2E;
+    --pmax-navy-light: #2A2A4A;
+    --black: #0F0F18;
+    --grey-900: #1F1F2E;
+    --grey-700: #4A4A5A;
+    --grey-500: #8A8A99;
+    --grey-300: #D5D5DC;
+    --grey-100: #F2F4F8;
+    --grey-50: #F8F9FB;
+    --white: #FFFFFF;
+    --soft-red: #FDECEE;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--black);
+    line-height: 1.6;
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ============= NAV ============= */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--grey-100);
+    z-index: 100;
+    padding: 14px 0;
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .nav-logo-mark {
+    color: var(--pmax-red);
+  }
+  .nav-logo-suffix {
+    color: var(--pmax-navy);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--grey-700);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: var(--pmax-red);
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* ============= HERO ============= */
+  .hero {
+    background: var(--pmax-navy);
+    color: var(--white);
+    padding: 160px 32px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(225, 29, 42, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-kicker {
+    display: inline-block;
+    padding: 7px 14px;
+    background: rgba(225, 29, 42, 0.16);
+    border: 1px solid rgba(225, 29, 42, 0.5);
+    color: var(--pmax-red);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6.5vw, 76px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 950px;
+  }
+  .hero h1 .accent {
+    color: var(--pmax-red);
+    font-style: italic;
+  }
+  .hero-tagline {
+    font-size: clamp(16px, 1.6vw, 20px);
+    color: rgba(255, 255, 255, 0.82);
+    max-width: 720px;
+    margin-bottom: 48px;
+    font-weight: 300;
+    line-height: 1.55;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 56px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    margin-top: 40px;
+  }
+  .hero-meta-item {
+    font-size: 13px;
+  }
+  .hero-meta-label {
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+  .hero-meta-value {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  /* ============= SECTION ============= */
+  section.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 32px;
+  }
+  @media (max-width: 768px) {
+    section.content {
+      padding: 64px 24px;
+    }
+  }
+
+  /* ============= INTRO ============= */
+  .intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 80px;
+  }
+  .intro-eyebrow {
+    color: var(--pmax-red);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--pmax-navy);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .intro p {
+    font-size: 17px;
+    color: var(--grey-700);
+    line-height: 1.7;
+  }
+
+  /* ============= PARTS GRID ============= */
+  .parts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+    gap: 32px;
+  }
+  @media (max-width: 1100px) {
+    .parts { grid-template-columns: 1fr; }
+  }
+
+  .part-card {
+    background: var(--white);
+    border: 1px solid var(--grey-100);
+    border-radius: 20px;
+    padding: 44px 40px 40px;
+    transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+  .part-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--pmax-red);
+    transform: scaleX(0.15);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .part-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -12px rgba(26, 26, 46, 0.12), 0 4px 12px -4px rgba(225, 29, 42, 0.08);
+    border-color: transparent;
+  }
+  .part-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .part-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .part-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--soft-red);
+    color: var(--pmax-red);
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .part-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--grey-500);
+    padding: 4px 12px;
+    border: 1px solid var(--grey-300);
+    border-radius: 100px;
+  }
+  .part-tag.featured {
+    color: var(--pmax-red);
+    background: var(--soft-red);
+    border-color: var(--soft-red);
+  }
+
+  .part-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 2.4vw, 30px);
+    font-weight: 700;
+    color: var(--pmax-navy);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .part-card .part-subtitle {
+    color: var(--grey-700);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  /* Topline blocks */
+  .topline-list {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+  .topline-list li {
+    position: relative;
+    padding-left: 28px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--grey-100);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--grey-900);
+  }
+  .topline-list li:last-child {
+    border-bottom: none;
+  }
+  .topline-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 14px;
+    height: 2px;
+    background: var(--pmax-red);
+  }
+  .topline-list li strong {
+    color: var(--pmax-navy);
+    font-weight: 700;
+  }
+
+  /* Grid stat tiles inside cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .stat-tile {
+    background: var(--grey-50);
+    padding: 16px 18px;
+    border-radius: 12px;
+    border-left: 3px solid var(--pmax-red);
+  }
+  .stat-tile-num {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--pmax-navy);
+    line-height: 1.1;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .stat-tile-lbl {
+    font-size: 12px;
+    color: var(--grey-700);
+    line-height: 1.4;
+  }
+
+  /* Sub-blocks (e.g. Products, Campaigns) */
+  .subgroup-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--pmax-red);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    margin-top: 8px;
+  }
+  .subgroup {
+    background: var(--grey-50);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+  }
+  .subgroup-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--grey-300);
+  }
+  .subgroup-item:last-child {
+    border-bottom: none;
+  }
+  .subgroup-item-name {
+    font-weight: 700;
+    color: var(--pmax-navy);
+    font-size: 14.5px;
+    margin-bottom: 3px;
+  }
+  .subgroup-item-desc {
+    font-size: 13px;
+    color: var(--grey-700);
+    line-height: 1.5;
+  }
+
+  /* CTA */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--grey-100);
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    background: var(--pmax-navy);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.25s;
+    border: 1.5px solid var(--pmax-navy);
+  }
+  .cta-button:hover {
+    background: var(--pmax-red);
+    border-color: var(--pmax-red);
+    transform: translateX(2px);
+  }
+  .cta-button-arrow {
+    transition: transform 0.25s;
+  }
+  .cta-button:hover .cta-button-arrow {
+    transform: translateX(3px);
+  }
+  .cta-source {
+    font-size: 12px;
+    color: var(--grey-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
+  /* ============= FULL-ROW CARDS ============= */
+  .part-card.full-row {
+    grid-column: 1 / -1;
+  }
+  /* When the topline list is in a full-row card, lay it out in 2 columns
+     so the wide canvas isn't wasted with one long thin column of bullets. */
+  .part-card.full-row .topline-list {
+    columns: 2;
+    column-gap: 48px;
+  }
+  .part-card.full-row .topline-list li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Also lay out the part-subtitle/intro and the list as a clean 2-up. */
+  @media (max-width: 768px) {
+    .part-card.full-row .topline-list {
+      columns: 1;
+    }
+  }
+
+  /* ============= FEATURED CARD (Part 3) ============= */
+  .part-card.featured {
+    background: linear-gradient(180deg, var(--pmax-navy) 0%, var(--pmax-navy-light) 100%);
+    color: var(--white);
+    border: none;
+    grid-column: 1 / -1;
+  }
+  .part-card.featured h3 {
+    color: var(--white);
+  }
+  .part-card.featured .part-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+  }
+  .part-card.featured .topline-list li {
+    color: rgba(255, 255, 255, 0.92);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  .part-card.featured .topline-list li strong {
+    color: var(--white);
+  }
+  .part-card.featured .part-number {
+    background: rgba(225, 29, 42, 0.25);
+    color: var(--pmax-red);
+  }
+  .part-card.featured .part-tag.featured {
+    color: var(--pmax-red);
+    background: rgba(225, 29, 42, 0.2);
+    border-color: rgba(225, 29, 42, 0.4);
+  }
+  .part-card.featured .stat-tile {
+    background: rgba(255, 255, 255, 0.06);
+    border-left-color: var(--pmax-red);
+  }
+  .part-card.featured .stat-tile-num {
+    color: var(--white);
+  }
+  .part-card.featured .stat-tile-lbl {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .part-card.featured .subgroup {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  .part-card.featured .subgroup-title {
+    color: var(--pmax-red);
+  }
+  .part-card.featured .subgroup-item {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  .part-card.featured .subgroup-item-name {
+    color: var(--white);
+  }
+  .part-card.featured .subgroup-item-desc {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .part-card.featured .cta-row {
+    border-top-color: rgba(255, 255, 255, 0.14);
+  }
+  .part-card.featured .cta-button {
+    background: var(--pmax-red);
+    border-color: var(--pmax-red);
+    color: var(--white);
+  }
+  .part-card.featured .cta-button:hover {
+    background: var(--white);
+    color: var(--pmax-navy);
+    border-color: var(--white);
+  }
+  .part-card.featured .cta-source {
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .part-card.featured .featured-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  @media (max-width: 768px) {
+    .part-card.featured .featured-content-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ============= FOOTER ============= */
+  footer {
+    background: var(--pmax-navy);
+    color: rgba(255, 255, 255, 0.65);
+    padding: 60px 32px 40px;
+    text-align: center;
+    border-top: 4px solid var(--pmax-red);
+  }
+  footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  footer .footer-brand {
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  footer .footer-brand span {
+    color: var(--pmax-red);
+  }
+  footer .footer-meta {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer .footer-meta a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+  }
+
+  /* ============= UTILITIES ============= */
+  @media (max-width: 600px) {
+    .stat-grid { grid-template-columns: 1fr; }
+    .part-card { padding: 32px 26px 28px; }
+    .cta-row { flex-direction: column; align-items: stretch; }
+    .cta-button { justify-content: center; }
+    .cta-source { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- =============== NAV =============== -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <span class="nav-logo-mark">PMAX</span>
+      <span class="nav-logo-suffix">BrandCom · Real Estate</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#part-1">Strategic Brief</a></li>
+      <li><a href="#part-2">Capability</a></li>
+      <li><a href="#part-3">H2 Roadmap</a></li>
+      <li><a href="#part-4">Market Research</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-kicker">PMAX BrandCom · Real Estate Vertical</span>
+    <h1>Real Estate 2026 <span class="accent">Strategic Briefing.</span></h1>
+    <p class="hero-tagline">
+      Where the Vietnam real estate market is going. How PMAX conquer it.
+      Four parts — the strategic brief, the capability, the H2 2026 roadmap, and the market research underneath.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Prepared by</div>
+        <div class="hero-meta-value">PMAX BrandCom Strategy</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Audience</div>
+        <div class="hero-meta-value">Board of Management</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Period</div>
+        <div class="hero-meta-value">Q2 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-label">Vertical</div>
+        <div class="hero-meta-value">Real Estate</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- =============== INTRO =============== -->
+<section class="content">
+  <div class="intro">
+    <div class="intro-eyebrow">What's inside</div>
+    <h2>One vertical. Four documents. One integrated story.</h2>
+    <p>
+      Each part below is a topline recap. Click through to the full document for the complete read.
+      The H2 2026 Roadmap is the most action-oriented — that's where the decisions are.
+    </p>
+  </div>
+
+  <div class="parts">
+
+    <!-- ============= PART 1 ============= -->
+    <article class="part-card" id="part-1">
+      <div class="part-header">
+        <div class="part-number">01</div>
+        <div class="part-tag">Strategic Brief · V2</div>
+      </div>
+      <h3>Vietnam Real Estate 2026 Strategic Brief.</h3>
+      <p class="part-subtitle">
+        The strategic baseline for the vertical — capability status, market context, and the four moves that define how PMAX competes.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <div class="stat-tile-num">2.5×</div>
+          <div class="stat-tile-lbl">Q1 2026 supply growth YoY</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">8</div>
+          <div class="stat-tile-lbl">Active enterprise RE clients</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">5</div>
+          <div class="stat-tile-lbl">Fault-lines defining 2026</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">4</div>
+          <div class="stat-tile-lbl">Strategic moves for the vertical</div>
+        </div>
+      </div>
+
+      <ul class="topline-list">
+        <li><strong>The market.</strong> Selective recovery — supply rebounded, FDI hit a 5-yr quarterly high, FTSE EM upgrade phased Sep 2026. But the speculator cycle has closed under credit caps and 8–11% rates.</li>
+        <li><strong>Five fault-lines.</strong> The Great Divergence (luxury 95% Hà Nội supply, mid-segment vanishing) · The Housing Reset (truth-seeker buyers) · The Big-5 Consolidation · The FTSE Upgrade · The Coastal Comeback (APEC 2027).</li>
+        <li><strong>PMAX position.</strong> 8 active enterprise clients across launch, repositioning, leadgen — challenger-tier specialist. Felix Mega Live is a defensible moat.</li>
+        <li><strong>Four strategic moves.</strong> Sharpen the offer to 3 flagship products · Lead with credibility, not creative · Build Northern + IFC corridor playbooks · NEW — Coastal & Resort playbook for APEC 2027 RFP cycles.</li>
+      </ul>
+
+      <div class="cta-row">
+        <span class="cta-source">Full read · Google Docs</span>
+        <a class="cta-button" href="https://docs.google.com/document/d/1b7GUgtYqSt7Q4BN05csGPGQnztCB7kT5/edit?usp=drive_web&ouid=110474225838672642729&rtpof=true" target="_blank" rel="noopener">
+          Read the full Strategic Brief V2
+          <span class="cta-button-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ============= PART 2 ============= -->
+    <article class="part-card" id="part-2">
+      <div class="part-header">
+        <div class="part-number">02</div>
+        <div class="part-tag">Capability Deck</div>
+      </div>
+      <h3>The PMAX BrandCom Real Estate offer.</h3>
+      <p class="part-subtitle">
+        Pitch-ready capability — three flagship products, the data + tech moat, and the hero cases that prove it.
+      </p>
+
+      <div class="stat-grid">
+        <div class="stat-tile">
+          <div class="stat-tile-num">3</div>
+          <div class="stat-tile-lbl">Flagship products</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">12+</div>
+          <div class="stat-tile-lbl">Years of vertical depth</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">+35%</div>
+          <div class="stat-tile-lbl">PAXY efficiency uplift</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-tile-num">x10</div>
+          <div class="stat-tile-lbl">CFP ROI uplift</div>
+        </div>
+      </div>
+
+      <ul class="topline-list">
+        <li><strong>The positioning.</strong> The integrated launch quarterback — total · data-led · vertical-deep · Vietnamese-first.</li>
+        <li><strong>Three flagship products.</strong> IMC Project Launch (BCONS · Kiến Á · BIM BayLife · Ecopark · Keppel) · Mega Live + Influencer (Felix — 517 bookings in 3h) · Performance Leadgen System (GotecLand CPL -53%).</li>
+        <li><strong>The moat.</strong> PAXY · MMM · CFP · Conversion API. The full marketing operating system — most agencies can't match it.</li>
+        <li><strong>Why PMAX conquer.</strong> Commercial muscle · End-to-end accountability · The data + tech moat. Three reasons heard repeatedly across the portfolio.</li>
+      </ul>
+
+      <div class="cta-row">
+        <span class="cta-source">Full deck · Google Slides</span>
+        <a class="cta-button" href="https://docs.google.com/presentation/d/1DaW3S8k_qpotQMDZNHhzKdSd23JQGizK/edit?slide=id.p1#slide=id.p1" target="_blank" rel="noopener">
+          Open the full Capability Deck
+          <span class="cta-button-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ============= PART 3 (FEATURED) ============= -->
+    <article class="part-card featured" id="part-3">
+      <div class="part-header">
+        <div class="part-number">03</div>
+        <div class="part-tag featured">H2 2026 Roadmap · V2 · The decisions</div>
+      </div>
+      <h3>The action plan for the next two quarters.</h3>
+      <p class="part-subtitle">
+        Three products. Two campaigns. One flagship event. The focused build commitment for H2 2026 — and the decisions BOM needs to approve.
+      </p>
+
+      <div class="featured-content-grid">
+        <div>
+          <div class="subgroup-title">Three priority products</div>
+          <div class="subgroup">
+            <div class="subgroup-item">
+              <div class="subgroup-item-name">01 · Coastal & Resort IMC Playbook</div>
+              <div class="subgroup-item-desc">Q3 2026 launch. First pilots: BIM, Sun Group Phú Quốc, MEYGROUP coastal trio.</div>
+            </div>
+            <div class="subgroup-item">
+              <div class="subgroup-item-name">02 · Group Operating System</div>
+              <div class="subgroup-item-desc">Q4 2026 launch. First pilot: TADT MEYGROUP. Multi-BU governance dashboard.</div>
+            </div>
+            <div class="subgroup-item">
+              <div class="subgroup-item-name">03 · Repositioning & Rescue Marketing</div>
+              <div class="subgroup-item-desc">Q4 2026 launch. Distressed inventory clearance + brand audit + sales push.</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="subgroup-title">Two GTM campaigns</div>
+          <div class="subgroup">
+            <div class="subgroup-item">
+              <div class="subgroup-item-name">01 · Vietnam RE Market Intelligence Series</div>
+              <div class="subgroup-item-desc">Quarterly POV publication. Q3 'Mid-Year Update' · Q4 'The FTSE Effect' · Q1 2027 Annual Outlook.</div>
+            </div>
+            <div class="subgroup-item">
+              <div class="subgroup-item-name">02 · The Challenger Tier campaign</div>
+              <div class="subgroup-item-desc">Always-on H2. LinkedIn series + case studies + flagship Challenger Forum (Q4 2026, dual-city).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="topline-list">
+        <li><strong>The V2 commitment.</strong> By end of Q4 2026, PMAX Real Estate will own three category-defining products and a quarterly market POV cadence — anchoring the challenger-tier specialist position.</li>
+        <li><strong>Two big-bang public moments.</strong> FTSE EM upgrade (21 Sep 2026) anchors Q3 publishing wave. Challenger Forum Q4 anchors annual BD-conversion event.</li>
+        <li><strong>Q1 2027 goal.</strong> 3 new flagship clients won from the H2 playbooks · vertical revenue +25% vs H2 2026 baseline.</li>
+      </ul>
+
+      <div class="cta-row">
+        <span class="cta-source">Full roadmap · Google Docs</span>
+        <a class="cta-button" href="https://docs.google.com/document/d/1yNPj7ZRZdWpoyq3KdfxPNtQYl1ozZLyT/edit?usp=drive_web&ouid=110474225838672642729&rtpof=true" target="_blank" rel="noopener">
+          Read the H2 2026 Roadmap V2
+          <span class="cta-button-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ============= PART 4 ============= -->
+    <article class="part-card full-row" id="part-4">
+      <div class="part-header">
+        <div class="part-number">04</div>
+        <div class="part-tag">Market Research · Topline</div>
+      </div>
+      <h3>Vietnam Real Estate 2026 — the data underneath.</h3>
+      <p class="part-subtitle">
+        The market signals shaping every move in Parts 1–3. Selected highlights only — full research in the linked document.
+      </p>
+
+      <ul class="topline-list">
+        <li><strong>Q1 2026 supply.</strong> ~52,000 units offered for sale · ~38,000 new (2.5× YoY) · apartments 67% of supply · Central Vietnam 26% (rising share).</li>
+        <li><strong>HCMC.</strong> VND 111M/sqm avg (+24.3% YoY) · East 85% of supply · luxury 57% of new supply · affordable segment effectively absent.</li>
+        <li><strong>Hà Nội.</strong> VND 123M/sqm avg (+50% YoY) · luxury 95% of Q1 2026 supply · Tay Ho peak VND 284M/sqm.</li>
+        <li><strong>Credit & rates.</strong> 8–11% home loan band · MB prime 8–8.5% · SBV directive: RE credit growth ≤ system credit growth in 2026.</li>
+        <li><strong>Social housing.</strong> 158,700 units 2026 target (1.5× 2025) · accelerated to 1M units by 2028 · Hà Nội target 120,000 units 2026–2030.</li>
+        <li><strong>Thủ Thiêm IFC.</strong> Inaugurated 21 Feb 2026 · 898 ha · 99-storey tower ($1.15B) · $10B initial commitments.</li>
+        <li><strong>Infrastructure.</strong> Metro Line 1 corridor: +50–200% property uplift · Bến Lức – Long Thành 88% complete (Q3 2026) · Ring Road 3 phase 1 opens June 2026.</li>
+        <li><strong>Northern industrial.</strong> +5,050 ha new land 2026–29 · Bắc Ninh attracted $18.6B FDI in 2025 · RBF occupancy 87%.</li>
+        <li><strong>Coastal recovery.</strong> Tourism +14–27% YoY in coastal hubs · 21.1M international arrivals · Vietnam #1 for Chinese leisure travel · APEC 2027 in Phú Quốc.</li>
+        <li><strong>FTSE EM upgrade.</strong> Confirmed 8 Apr 2026 · phased index inclusion from 21 Sep 2026 through 2027.</li>
+        <li><strong>Marketing landscape.</strong> 71% of VN shoppers influenced by livestream · 89% follow at least one online influencer · 86% APAC distrust unverified content post-COVID.</li>
+      </ul>
+
+      <div class="cta-row">
+        <span class="cta-source">Full research · Google Docs</span>
+        <a class="cta-button" href="https://docs.google.com/document/d/1RrMRcp1LzoCiIZJcXdHcPRQxKHRnlm9k/edit" target="_blank" rel="noopener">
+          Read the Market Research
+          <span class="cta-button-arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">PMAX <span>BrandCom</span> · Real Estate Vertical</div>
+    <div class="footer-meta">
+      The 2026 Strategic Briefing for BOM &nbsp;·&nbsp; Q2 2026<br />
+      <a href="mailto:contact@pmax.com.vn">contact@pmax.com.vn</a> &nbsp;·&nbsp; (+84) 28 7300 1778 &nbsp;·&nbsp; <a href="https://www.pmax.com.vn" target="_blank" rel="noopener">pmax.com.vn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
